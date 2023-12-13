@@ -24,7 +24,7 @@ import { defaults, checkPrecision, isObject } from '../utils';
  * @param {String}        [decimal="."] String with the decimal separator.
  * @return {String} The given number properly formatted.
  */
-export default function formatNumber(number, precision = 2, thousand =',', decimal = '.') {
+export default function formatNumber(number, precision = 2, thousand = ',', decimal = '.') {
     // Resursively format arrays:
     if (isArray(number)) {
         return number.map(function (val) {
