@@ -19,7 +19,7 @@ import { number } from '../settings';
  * @param {Number} [precision=2] The number of decimal digits to keep.
  * @return {String} The given number transformed into a string with the given precission
  */
-export default function toFixed(value, precision) {
+export default function toFixed(value, precision = 2) {
     precision = checkPrecision(precision, number.precision);
     var power = Math.pow(10, precision);
 

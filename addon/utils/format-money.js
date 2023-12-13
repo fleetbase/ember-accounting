@@ -38,7 +38,7 @@ import { defaults, checkPrecision, isObject, checkCurrencyFormat } from '../util
  * @param {String}        [format="%s%v"] String with the format to apply, where %s is the currency symbol and %v is the value.
  * @return {String} The given number properly formatted as money.
  */
-export default function formatMoney(number, symbol, precision, thousand, decimal, format) {
+export default function formatMoney(number, symbol = '$', precision = 2, thousand = ',', decimal = '.', format = '%s%v') {
     // Resursively format arrays:
     if (isArray(number)) {
         return number.map(function (val) {
